@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "7233fa5c-0c04-48b6-b8e6-360eb011349e",
+		"name": "attribute mapping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:9004/api/v2/nlp/attribute_mapping?threshold=0.75&nlargest=3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\":{\n\t\t\"attribute_list_1\":[\"flavor\",\"color\"],\n\t\t\"attribute_list_2\":[\"flavour\",\"colour_map\",\"color_map\",\"dolor\"]\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9004/api/v2/mapping/nlp/attribute_mapping?threshold=0.75&nlargest=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v2",
+						"mapping",
+						"nlp",
+						"attribute_mapping"
+					],
+					"query": [
+						{
+							"key": "weights",
+							"value": "2.5,3.5",
+							"disabled": true
+						},
+						{
+							"key": "threshold",
+							"value": "0.75"
+						},
+						{
+							"key": "nlargest",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:9004/api/v2/nlp/browsenodes_mapping?weights=2.5,3.5&threshold=0.75&nlargest=3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\":{\n\t\t\"browsenode_list_1\":[\"flavor\",\"color\"],\n\t\t\"browsenode_list_2\":[\"flavour\",\"colour_map\",\"color_map\",\"dolor\"]\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9004/api/v2/mapping/nlp/browsenodes_mapping/publish?weights=3.5,2.5&threshold=0.75&nlargest=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"v2",
+						"mapping",
+						"nlp",
+						"browsenodes_mapping",
+						"publish"
+					],
+					"query": [
+						{
+							"key": "weights",
+							"value": "3.5,2.5"
+						},
+						{
+							"key": "threshold",
+							"value": "0.75"
+						},
+						{
+							"key": "nlargest",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

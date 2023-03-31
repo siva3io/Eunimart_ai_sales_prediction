@@ -1,0 +1,10 @@
+*.idea
+*.pyc
+*.vscode
+.env
+venv
+env
+.vscode
+*/*.swp
+dummy.json
+*.pkl
